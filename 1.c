@@ -1,4 +1,4 @@
-/// 2110556, sgriskus2002@gmail.com, 1 uûduotis, uûduoties variantas nr. 3
+/// 2110556, sgriskus2002@gmail.com, 1 u≈æduotis, u≈æduoties variantas nr. 3
 #include <stdio.h>
 int main()
 {

@@ -1,4 +1,5 @@
-/// The program was created by Sarunas Griskus. Its purpose is checking the input file for words satisfying the condition of matching second and third last characters and printing it to a output file.
+/// The program was created by Sarunas Griskus. Its purpose is checking the input file for words satisfying the condition of matching second and third last characters and printing it to a output file.\
+/// Task 3, variant 5
 
 #include <stdio.h>
 #include <string.h>

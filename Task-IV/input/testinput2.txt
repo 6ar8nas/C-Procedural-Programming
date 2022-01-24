@@ -1,0 +1,4 @@
+asdadasd  asdasd
+asd
+asd.txt
+input/duom.txt

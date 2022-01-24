@@ -1,6 +1,8 @@
-/// 2110556, sgriskus2002@gmail.com, 2 uzduotis, uzduoties variantas nr. 9
+// Task 2 of the C Procedural Programming course practical work.
+// Enter an integer N. Enter N integers that will form a vector. Find the greatest distance (measured by positions of the 
+// elements) between the extremes of this vector. The program should output the element numbers and the distance between them.
+
 #include <stdio.h>
-#define MAX_SIZE 100000
 
 void clearSymbols()
 {
@@ -15,7 +17,7 @@ int isExtremum (int element1, int element2, int element3)
     return 0;
 }
 
-int inputValid (int *target)
+int isInputValid (int *target)
 {
     if((scanf("%d", target) == 1) && (getchar() == '\n'))
         return 1;
@@ -25,7 +27,7 @@ int inputValid (int *target)
 void inputArraySize (int *arraySize)
 {
     printf("Please enter the integer value of N.\n\n");
-    while(!inputValid (arraySize))
+    while(!isInputValid (arraySize))
     {
         printf("Error. Please enter a valid N value.\n");
         clearSymbols();
@@ -37,7 +39,7 @@ void inputElements (int arraySize, int elements[])
            : "\nYour N input was below or equal to 0, therefore the vector will be empty.\n");
     for(int i = 0; i < arraySize; ++i)
     {
-        if(inputValid(&elements[i]))
+        if(isInputValid(&elements[i]))
             ;
         else
         {
@@ -48,7 +50,7 @@ void inputElements (int arraySize, int elements[])
     }
 }
 
-void processing(int arraySize, int elements[], int *extremumsCount, int maxLengthPos[])
+void processElements(int arraySize, int elements[], int *extremumsCount, int maxLengthPos[])
 {
     int extremums[arraySize-2];
     for(int i = 1; i < arraySize-1; ++i)
@@ -73,7 +75,7 @@ void processing(int arraySize, int elements[], int *extremumsCount, int maxLengt
     }
 }
 
-void output (int extremumsCount, int maxLengthPos[])
+void outputResults(int extremumsCount, int maxLengthPos[])
 {
     if(extremumsCount < 2)
         printf("\nThere weren't enough extremums recorded in the vector.");
@@ -92,8 +94,8 @@ int main()
     int elements[n];
     inputElements(n, elements);
     int extremumsCount = 0, maxLengthPos[2];
-    processing(n, elements, &extremumsCount, maxLengthPos);
-    output(extremumsCount, maxLengthPos);
+    processElements(n, elements, &extremumsCount, maxLengthPos);
+    outputResults(extremumsCount, maxLengthPos);
     printf("\nProgram terminated.");
     return 0;
 }

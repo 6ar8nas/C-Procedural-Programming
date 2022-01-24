@@ -1,5 +1,6 @@
-/// The program was created by Sarunas Griskus. Its purpose is checking the input file for words satisfying the condition of matching second and third last characters and printing it to a output file.\
-/// Task 3, variant 5
+// Task 3 of the C Procedural Programming course practical work.
+// The purpose of the program is checking the input file for words satisfying the condition 
+// of matching second and third last characters and printing it to a output file.
 
 #include <stdio.h>
 #include <string.h>
@@ -32,7 +33,8 @@ void findSatisfyingWords(char line[], FILE *Output)
 int main()
 {
     printf("The program will read 2 lines from the standard input stream, representing input and output file names respectively.\n");
-    printf("It will then read the symbols separated by whitespaces from the input file and output them if a condition\nof their second character matching the third symbol from the back is satisfied.\nFor example: 12341234, ABBA, etc..\n\n");
+    printf("It will then read the symbols separated by white-spaces from the input file and output them if a condition\nof their second " 
+           "character matching the third symbol from the back is satisfied.\nFor example: 12341234, ABBA, etc..\n\n");
 
     FILE *Input;
     FILE *Output;
@@ -40,7 +42,7 @@ int main()
     char inputFile[256] = {}, outputFile[256] = {};
 
     printf("Please enter the input file name. This file should be located in the working directory.\n");
-    scanf("%s", inputFile); /// strcpy(inputFile, "duom1.txt");
+    scanf("%s", inputFile);
 
     Input = fopen(inputFile, "r");
     if(Input == NULL)
@@ -50,7 +52,7 @@ int main()
     }
 
     printf("Please enter the desired output file name.\n");
-    scanf("%s", outputFile); /// strcpy(outputFile,"rez.txt");
+    scanf("%s", outputFile);
 
     Output = fopen(outputFile, "w");
     if(Output == NULL)

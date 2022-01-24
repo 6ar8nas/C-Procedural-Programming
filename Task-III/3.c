@@ -1,7 +1,3 @@
-// Task 3 of the C Procedural Programming course practical work.
-// The purpose of the program is checking the input file for words satisfying the condition 
-// of matching second and third last characters and printing it to a output file.
-
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>

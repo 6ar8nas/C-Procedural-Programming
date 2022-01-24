@@ -1,4 +1,4 @@
-###### Task 1 of the C Procedural Programming course practical work.  
+##### Task 1 of the C Procedural Programming course practical work.  
 
 ### Problem
 

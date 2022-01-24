@@ -1,4 +1,4 @@
-# Linked-list
+# Linked list
 
 ## Author, contacts
 

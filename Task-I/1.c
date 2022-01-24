@@ -1,9 +1,13 @@
-/// 2110556, sgriskus2002@gmail.com, 1 užduotis, užduoties variantas nr. 3
+// Task 1 of the C Procedural Programming course practical work.
+// Enter a sequence of integers, which would end in 0. Output the amount of numbers, which had odd number of digits.
+
 #include <stdio.h>
 int main()
 {
     int current_number = 1, sum_odd_total = 0;
-    printf("Program loaded.\nPlease enter the integers of the sequence until specified differently.\n\n");
+    printf("Program loaded.\n");
+    printf("The program will take a sequence of integers and output the amount of numbers with odd number of digits. To end the the input, please enter a 0.\n");
+    printf("Please start entering the integers of the sequence until specified differently.\n\n");
     do
     {
         if((scanf("%d", &current_number) == 1) && (getchar() == '\n'))
